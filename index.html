@@ -42,7 +42,64 @@
 
     <section id="about">
       <h2>About</h2>
-      <p>basic + tally + dca + pagdca + ccpct + ccc + html + photoshop + ms office — सभी computer software और hardware की class लेता हूँ (online + offline) बिलकुल free.</p>
+      <p><section id="courses" style="padding:40px 20px; background:#121214; color:#fff;">
+  <h2 style="margin:0 0 14px;">Courses</h2>
+  <p style="color:#a1a1aa; margin:0 0 16px;">हम जो पढ़ाते हैं:</p>
+
+  <ul class="course-list">
+    <li>BASIC COMPUTER</li>
+    <li>MS OFFICE</li>
+    <li>ADVANCE EXCEL</li>
+    <li>TALLY</li>
+    <li>CPCT</li>
+    <li>CCC</li>
+    <li>HTML</li>
+    <li>DCA</li>
+    <li>PGDCA</li>
+  </ul>
+</section>
+
+<style>
+  /* Courses list styling + animation */
+  .course-list{
+    list-style:none; padding:0; margin:0; 
+    display:grid; gap:10px;
+    grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+  }
+  .course-list li{
+    position:relative;
+    padding:10px 14px 10px 40px;
+    background:#1c1c1f; border:1px solid rgba(255,255,255,.08);
+    border-radius:10px;
+    color:#eaeaea;
+    box-shadow:0 6px 18px rgba(0,0,0,.20);
+    /* animation */
+    opacity:0; transform: translateY(10px);
+    animation: courseIn .6s ease forwards;
+  }
+  /* left icon bullet */
+  .course-list li::before{
+    content:""; position:absolute; left:12px; top:50%; transform:translateY(-50%);
+    width:14px; height:14px; border-radius:50%;
+    background: radial-gradient(circle at 30% 30%, #fff, #ef4444);
+    box-shadow:0 0 12px rgba(239,68,68,.6), 0 0 2px rgba(255,255,255,.6) inset;
+  }
+  /* staggered delay so items ek-ek karke aayein */
+  .course-list li:nth-child(1){ animation-delay:.10s;}
+  .course-list li:nth-child(2){ animation-delay:.20s;}
+  .course-list li:nth-child(3){ animation-delay:.30s;}
+  .course-list li:nth-child(4){ animation-delay:.40s;}
+  .course-list li:nth-child(5){ animation-delay:.50s;}
+  .course-list li:nth-child(6){ animation-delay:.60s;}
+  .course-list li:nth-child(7){ animation-delay:.70s;}
+  .course-list li:nth-child(8){ animation-delay:.80s;}
+  .course-list li:nth-child(9){ animation-delay:.90s;}
+
+  @keyframes courseIn{
+    from{opacity:0; transform:translateY(14px);}
+    to  {opacity:1; transform:translateY(0);}
+  }
+</style></p>
     </section>
 
     <section id="schedule">
